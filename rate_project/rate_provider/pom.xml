@@ -13,10 +13,9 @@
     </parent>
     
     <groupId>com.example</groupId>
-    <artifactId>currency-rate-provider</artifactId>
+    <artifactId>rate-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>currency-rate-provider</name>
-    <description>Currency Rate Provider Service</description>
+    <name>rate-provider</name>
     
     <properties>
         <java.version>11</java.version>
@@ -26,6 +25,23 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <!-- ZooKeeper dependencies -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-x-discovery</artifactId>
+            <version>5.4.0</version>
         </dependency>
     </dependencies>
     

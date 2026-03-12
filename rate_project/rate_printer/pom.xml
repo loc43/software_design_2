@@ -16,7 +16,6 @@
     <artifactId>rate-printer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rate-printer</name>
-    <description>Rate Printer Service</description>
     
     <properties>
         <java.version>11</java.version>
@@ -26,6 +25,23 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <!-- ZooKeeper dependencies -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-x-discovery</artifactId>
+            <version>5.4.0</version>
         </dependency>
     </dependencies>
     
