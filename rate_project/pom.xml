@@ -13,5 +13,7 @@
     <modules>
         <module>rate_printer</module>
         <module>rate_provider</module>
+        <module>service2</module>
+        <module>zookeeper-app</module>
     </modules>
 </project>

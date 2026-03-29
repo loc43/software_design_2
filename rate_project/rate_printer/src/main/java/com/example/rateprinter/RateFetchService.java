@@ -17,10 +17,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Service
 public class RateFetchService {
     
+    private final RestTemplate restTemplate;
+
     private CuratorFramework client;
     private ServiceDiscovery<Void> serviceDiscovery;
     private ServiceProvider<Void> serviceProvider;
     private AtomicInteger counter = new AtomicInteger(0);
+
+    public RateFetchService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
     
     @PostConstruct
     public void init() throws Exception {
@@ -55,7 +61,6 @@ public class RateFetchService {
             
             String url = "http://" + instance.getAddress() + ":" + instance.getPort() + "/api/rates/usdrub";
             
-            RestTemplate restTemplate = new RestTemplate();
             return restTemplate.getForObject(url, CurrencyRate.class);
             
         } catch (Exception e) {
