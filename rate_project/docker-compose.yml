@@ -38,8 +38,6 @@ services:
     command:
       - --config.file=/etc/prometheus/prometheus.yml
 
-  # После запуска всех Spring-приложений на хосте: в Grafana http://localhost:3000
-  # импортировать дашборд JVM Micrometer: Dashboards -> Import -> ID 4701, datasource Prometheus.
   grafana:
     image: grafana/grafana:10.2.0
     ports:
